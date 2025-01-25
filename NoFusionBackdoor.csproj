@@ -18,6 +18,5 @@
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="ECHO Copying mod to $(BONELAB_DIR)\Mods&#xD;&#xA;COPY &quot;$(TargetPath)&quot; &quot;$(BONELAB_DIR)\Mods\$(ProjectName).dll&quot;" />
-		<Exec Command="&quot;$(Obfuscar)&quot; obfuscar.xml" Condition="'$(Configuration)' == 'Release'" />
 	</Target>
 </Project>
